@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "cleaninventory",
+	"version": "${version}",
+	"name": "CleanInventory",
+	"description": "Adds a button to sort and clean your inventory.",
+	"authors": [
+		"bottledpepsi"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "GPL-3.0",
+	"icon": "assets/cleaninventory/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.bottled.CleanInventory"
+		],
+		"client": [
+			"com.bottled.CleanInventoryClient"
+		]
+	},
+	"mixins": [
+		"cleaninventory.mixins.json",
+		{
+			"config": "cleaninventory.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
